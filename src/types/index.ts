@@ -78,6 +78,7 @@ export interface CountryDocument {
 }
 
 export interface StateDocument {
+  dm_directoryParents: never[];
   name: string;
   slug: string;
   meta: EntityMeta;

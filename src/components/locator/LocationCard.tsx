@@ -8,6 +8,7 @@ import { getDirectionUrl, getLink } from "../../config/GlobalFunctions";
 import { SiteData, TemplateMeta } from "../../types";
 import Phone from "../common/Phone";
 import OpenCloseStatus from "../common/OpenCloseStatus";
+import { Hours } from "../common/Hours/Hours";
 
 type LocationCardProps = {
   location: LocationResult;
@@ -27,6 +28,7 @@ const LocationCard = ({
     setHoveredLocation,
     hoveredLocation,
   } = React.useContext(SearchContext);
+  const [open, setOpen] = React.useState(false);
   const cardRef = React.useRef<HTMLDivElement>(null);
   const url = getLink<RawData>(location.rawData, meta, false, 0, true, true);
 console.log('url', url)
@@ -48,7 +50,9 @@ console.log('url', url)
       scrollIntoView(cardRef.current, 80);
     }
   }, [infoWindowContent]);
-
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
     <div
       ref={cardRef}
@@ -97,7 +101,25 @@ console.log('url', url)
           />
         </div>
       )}
-
+      
+       {/* Hours dropdown */}
+       {location.rawData.hours && 
+       <div className="dropdown">
+      <button onClick={handleOpen}>Dropdown</button>
+      {open ? (
+        
+          <Hours
+                        hours={location.rawData.hours}
+                        showHeader={true}
+                        startOfWeek="today"
+                        message={location.rawData.additionalHoursText}
+                        locale={_site.meta.locale}
+                        timeZone={location.rawData.timezone}
+                      /> 
+      ) : null}
+      {open ? <div></div> : <div></div>}
+    </div>
+  }
       {/* {location.rawData.hours && (
           <div className="icon-row locator--icon--row">
             <a
