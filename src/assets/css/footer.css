@@ -1,0 +1,22 @@
+.site-footer{
+    @apply bg-gray-100 pt-10
+}
+.footer-block{
+    @apply px-4 w-full md:w-1/4 mb-10
+}
+.footer-heading{
+    @apply text-lg font-medium text-[#8B0000]
+}
+.f-logo{
+    @apply mb-10 md:mb-20
+}
+.f-logo img{
+    @apply mix-blend-multiply max-h-[100px]
+}
+.footer-links{
+    @apply list-none mt-4
+}
+
+.footer-bottom{
+    @apply bg-[#8B0000] text-white py-2.5 leading-5 text-sm text-center
+}

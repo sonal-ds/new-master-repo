@@ -1,0 +1,18 @@
+.site-header{
+    @apply bg-white text-[#8B0000] py-2 lg:py-5 shadow
+}
+.site-header .row{
+    @apply justify-between items-center
+}
+.logo{
+    @apply px-4 max-w-[200px] md:max-w-none
+}
+.logo img{
+    @apply max-h-[100px]
+}
+.header-menu ul{
+    @apply hidden md:flex leading-10
+}
+.header-menu ul li{
+    @apply mx-5
+}

@@ -1,0 +1,21 @@
+{
+  "$id": "ce_city.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "City-default",
+  "entityType": "ce_city",
+  "fields": [
+    "c_addressCountryAbbreviation",
+    "c_addressCountryDisplayName",
+    "c_addressRegionAbbreviation",
+    "c_addressRegionDisplayName",
+    "description",
+    "dm_baseEntityCount",
+    "dm_childEntityIds",
+    "dm_directoryChildren",
+    "dm_directoryManagerId",
+    "dm_directoryParents",
+    "richTextDescription",
+    "slug"
+  ],
+  "required": []
+}

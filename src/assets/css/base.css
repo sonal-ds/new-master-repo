@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Black.woff2') format('woff2'),
+        url('../fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+        url('../fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-SemiBold.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-Regular.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-Bold.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Libre Franklin';
+    src: url('../fonts/LibreFranklin-Medium.woff2') format('woff2'),
+        url('../fonts/LibreFranklin-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    @apply scroll-smooth
+}
+body :focus-visible{
+    outline: 0.0625rem dotted;
+    outline: -webkit-focus-ring-color auto 0.0625rem;
+}
+body{
+    @apply bg-transparent font-primary text-base
+}
+.row{
+    @apply flex flex-wrap -mx-4
+}
+a{
+    @apply hover:underline focus:outline-none
+}
+
+.social-links{
+    @apply flex items-center
+}
+.social-links a{
+    @apply mr-5 last:mr-0
+}
+
+.page-wrapper{
+    @apply min-h-screen flex flex-col
+}
+.page-wrapper .site-footer{
+    @apply mt-auto
+}
+
+
+.button{
+    @apply inline-flex items-center justify-center text-center font-primary text-base px-5 py-1.5 leading-[25px] bg-[#8B0000] border border-black text-white hover:bg-[#b3868e] hover:no-underline transition-all duration-300
+}
+
+
+/* location card */
+.location-card{
+    @apply py-5 px-[15px] lg:px-8 text-sm leading-5 bg-white hover:bg-gray-200
+}
+.location-card.active{
+    @apply bg-black bg-opacity-5
+}
+
+.location-name{
+    @apply text-base font-medium text-orange leading-6 inline-block mr-24 w-fit
+}
+.icon-row .miles{
+    @apply absolute top-0 right-0 font-medium text-base leading-6
+}
+.arrow-down{
+    @apply w-2.5 h-1.5 bg-caretIcon bg-no-repeat bg-left-top bg-[length:9px_6px] ml-1
+}
+.addressIcon{
+    @apply w-4 h-4 bg-mapIcon bg-no-repeat bg-left-top bg-[length:16px_16px]
+}
+.phoneIcon{
+    @apply w-4 h-4 bg-phoneIcon bg-no-repeat bg-left-top bg-[length:16px_16px]
+}
+.clockIcon{
+    @apply w-4 h-4 bg-clockIcon bg-no-repeat bg-left-top bg-[length:16px_16px]
+}
+.icon-row{
+    @apply pl-6 relative mb-2.5 text-black
+}
+.icon-row .icon{
+    @apply absolute top-0 left-0
+}
+.icon-row .icon.addressIcon{
+    @apply top-1
+}
+.locator--icon--row .open-close__icon{
+@apply flex items-center gap-1.5 after:content-[""] after:w-2 after:h-2 after:bg-caretIcon after:bg-no-repeat;
+}
+.locator--icon--row a.active.onhighLight .open-close__icon{
+@apply after:rotate-180;
+}
+.closed .open-close__icon{
+@apply after:content-none;
+}
+.icon-row .label{
+    @apply text-base font-medium text-orange leading-6
+}
+.icon-row a{
+    @apply hover:underline
+}
+.button-bx-detail{
+    @apply flex items-center max-[360px]:flex-col pt-2.5 gap-2
+}
+.button-bx-detail .button{
+    @apply max-[360px]:w-full
+}
+.button-bx{
+    @apply max-[360px]:w-full max-[360px]:text-center
+}
+.icon-row abbr{
+    @apply no-underline
+}
+
+/* Housrs */
+
+.hours-table{
+    @apply w-full
+}
+.hours-table .hours-table-row{
+    @apply border-b border-gray-300 last:border-b-0
+}
+.hours-table .hours-table-row td{
+    @apply py-1
+}
+.hours-table .hours-table-row .hours-table-day{
+    @apply pr-8 w-full
+}
+.hours-table-interval{
+    @apply w-full flex justify-between
+}
+.hours-table-interval span.time{
+    @apply px-2 leading-6 whitespace-nowrap
+}
+.is-today .hours-table-interval span.time{
+    @apply bg-orange rounded-[5px] text-white
+}
+.hours-table-interval span.seperation{
+    @apply w-[17px] text-center
+}
+.hours-table-interval span.closed{
+    @apply px-2
+}
+
+.holiday-hours{
+    @apply w-full border border-gray-300 mb-4 bg-white
+}
+.holiday-hours td{
+    @apply px-1.5
+}
+
+/* Breadcrumb */
+.breadcrumb-wrapper{
+    @apply py-2.5 w-full z-10 text-sm border-b border-gray-100
+}
+.breadcrumbs ol{
+    @apply flex flex-wrap
+} 
+/* .breadcrumbs .breadcrumb-nav .breadcrumb-item{
+    @apply after:content-['>'] last:after:content-none after:font-normal after:mx-1
+} */
+.breadcrumbs ol .breadcrumb-separator{
+    @apply mx-1
+}
+.breadcrumbs ol .breadcrumb-item a{
+    @apply font-normal
+}
+
+.sec-title{
+    @apply text-2xl md:text-4xl font-bold mb-5 text-orange
+}
+
+.page-title{
+    @apply py-10 md:py-16 text-3xl md:text-5xl font-bold bg-orange bg-opacity-5 text-orange px-4
+}
