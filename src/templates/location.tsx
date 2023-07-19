@@ -82,7 +82,7 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document, __meta }) => {
-  if (__meta.mode === "development") {
+  if (__meta.mode === "production") {
     return document.slug;
   } else {
     return getLink(document, __meta, false, 0, true);
