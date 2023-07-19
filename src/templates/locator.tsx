@@ -147,7 +147,7 @@ const Locator: Template<LocatorTemplateProps> = ({
           latitude: parseFloat(YEXT_PUBLIC_DEFAULT_LATITUDE),
           longitude: parseFloat(YEXT_PUBLIC_DEFAULT_LONGITUDE),
         }}
-        mapboxAccessToken={YEXT_PUBLIC_MAP_BOX_API_KEY}
+        // mapboxAccessToken={YEXT_PUBLIC_MAP_BOX_API_KEY}
         googleApiKey={YEXT_PUBLIC_GOOGLE_API_KEY}
         limit={parseInt(YEXT_PUBLIC_PAGE_LIMIT)}
         autoLoadAllResult={false}
